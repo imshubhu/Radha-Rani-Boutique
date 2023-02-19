@@ -60,6 +60,8 @@ export default function Main() {
           {data &&
             data.map((item) => (
               <ImageListItem key={item._id}>
+              {
+                item.images && 
                 <img
                   src={`https://kurta-backend-production.up.railway.app/${item.images[0].filename}`}
                   srcSet={`https://kurta-backend-production.up.railway.app/${item.images[0].filename}`}
@@ -67,11 +69,7 @@ export default function Main() {
                   loading="lazy"
                   onClick={() => handleOpen(item.images)}
                 />
-                {/* <ImageListItemBar
-                    title={item.title}
-                    subtitle={item.author}
-
-                  /> */}
+              }
               </ImageListItem>
             ))}
         </ImageList>
