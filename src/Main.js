@@ -53,12 +53,13 @@ export default function Main() {
 
   return (
     <>
-      <div style={{ display: "flex", justifyContent: 'space-between' }}>
+      <div style={{ display: "flex", justifyContent: 'space-between', background: '#e6e5ff' }}>
         <img src="/zyanna.jpg" alt="logo" width="100px"/>
-        <h1>Radha-Rani Boutique</h1>
+        <h1>Zyanna</h1>
         <span></span>
       </div>
-    <Container>
+    <Container style={{background: '#FFEBCD'}}>
+      <h4>Zyanna</h4>
       <Box sx={{ width: "auto", height: "auto" }}>
         <ImageList variant="masonry" cols={3} gap={8}>
           {data &&
@@ -100,17 +101,18 @@ export default function Main() {
         </Box>
       </Modal>
     </Container>
-    <footer>
-      <Container maxWidth="lg">
-        <Box py={6} display="flex" flexWrap="wrap" alignItems="center">
+    <footer style={{background: '#000', color: '#fff'}}>
+        <Box py={6} display="flex" flexWrap="wrap" alignItems="center" style={{margin: '0 30px', justifyContent: 'space-between'}}>
           <img src="/zyanna.jpg" alt="logo" width="100px"/>
-          <Box component="nav" >
-                Address: ABCD
-                Contact: 000182
-          </Box>
-          <Typography color="textSecondary" component="p" variant="caption" gutterBottom={false}>© 2023 RadhaRani Boutique All rights reserved.</Typography>
+          <div>
+            <h4>CONTACT US</h4>
+            <p>9974446247</p>
+            <p>9574991916</p>
+            <p>chirenb@gmail.com</p>
+            <p>UG-145, Vikaram Nagar Soc., Opp. Trikam Nagar-2, Above Radharani Boutique, Nr. Bombay Market, L.H. Road, Surat.</p>
+          </div>
+          <Typography color="textSecondary" component="p" variant="caption" gutterBottom={false}>© 2023 Zyanna All rights reserved.</Typography>
         </Box>
-      </Container>
     </footer>
     </>
   );
