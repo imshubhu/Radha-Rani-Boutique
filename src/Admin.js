@@ -51,21 +51,6 @@ export default function Admin() {
     getData();
   }, []);
 
-  const submit = async () => {
-    const form = new FormData();
-    form.append("title", title);
-    form.append("image", file);
-    const res = await axios.post(
-      "https://kurta-backend-production.up.railway.app/uploadProfilePicture",
-      form
-    );
-    if (res.data.success) {
-      setFile([]);
-      setFilePreview([]);
-      setTitle("");
-      getData();
-    }
-  };
 
   const deleteData = async (id) => {
     const res = await axios.get(
@@ -140,7 +125,7 @@ export default function Admin() {
           </div>
           {/*  */}
           <h2>List Of Image Data</h2>
-          <table>
+          <table style={{width: '100%'}}>
             <thead>
               <tr>
                 <th width={"20%"}>Title</th>
@@ -153,7 +138,7 @@ export default function Admin() {
                 data.map((e) => (
                   <tr key={e._id}>
                     <td width={"20%"}>{e.title}</td>
-                    <td width={"80%"}>
+                    <td width={"80%"} style={{display: 'flex'}}>
                       {" "}
                       {e.images &&
                         e.images.map((f, i) => (
