@@ -5,6 +5,8 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import Container from "@mui/material/Container";
 import axios from "axios";
+import Card from '@mui/material/Card';
+import Typography from '@mui/material/Typography'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import Modal from "@mui/material/Modal";
@@ -50,11 +52,13 @@ export default function Main() {
   }, []);
 
   return (
-    <Container>
-      <div style={{ display: "flex" }}>
+    <>
+      <div style={{ display: "flex", justifyContent: 'space-between' }}>
         <img src="/zyanna.jpg" alt="logo" width="100px"/>
         <h1>Radha-Rani Boutique</h1>
+        <span></span>
       </div>
+    <Container>
       <Box sx={{ width: "auto", height: "auto" }}>
         <ImageList variant="masonry" cols={3} gap={8}>
           {data &&
@@ -96,5 +100,18 @@ export default function Main() {
         </Box>
       </Modal>
     </Container>
+    <footer>
+      <Container maxWidth="lg">
+        <Box py={6} display="flex" flexWrap="wrap" alignItems="center">
+          <img src="/zyanna.jpg" alt="logo" width="100px"/>
+          <Box component="nav" >
+                Address: ABCD
+                Contact: 000182
+          </Box>
+          <Typography color="textSecondary" component="p" variant="caption" gutterBottom={false}>© 2023 RadhaRani Boutique All rights reserved.</Typography>
+        </Box>
+      </Container>
+    </footer>
+    </>
   );
 }
