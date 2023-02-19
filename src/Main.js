@@ -53,13 +53,13 @@ export default function Main() {
 
   return (
     <>
+    <div style={{background: '#FFEBCD'}}>      
       <div style={{ display: "flex", justifyContent: 'space-between', background: '#e6e5ff' }}>
         <img src="/zyanna.jpg" alt="logo" width="100px"/>
         <h1>Zyanna</h1>
         <span></span>
       </div>
-    <Container style={{background: '#FFEBCD'}}>
-      <h4>Zyanna</h4>
+      <Container >
       <Box sx={{ width: "auto", height: "auto" }}>
         <ImageList variant="masonry" cols={3} gap={8}>
           {data &&
@@ -101,6 +101,7 @@ export default function Main() {
         </Box>
       </Modal>
     </Container>
+    </div>
     <footer style={{background: '#000', color: '#fff'}}>
         <Box py={6} display="flex" flexWrap="wrap" alignItems="center" style={{margin: '0 30px', justifyContent: 'space-between'}}>
           <img src="/zyanna.jpg" alt="logo" width="100px"/>
@@ -111,7 +112,7 @@ export default function Main() {
             <p>chirenb@gmail.com</p>
             <p>UG-145, Vikaram Nagar Soc., Opp. Trikam Nagar-2, Above Radharani Boutique, Nr. Bombay Market, L.H. Road, Surat.</p>
           </div>
-          <Typography color="textSecondary" component="p" variant="caption" gutterBottom={false}>© 2023 Zyanna All rights reserved.</Typography>
+          <Typography color="textSecondary" component="p" variant="caption" gutterBottom={false} style={{color: '#fff'}}>© 2023 Zyanna All rights reserved.</Typography>
         </Box>
     </footer>
     </>
