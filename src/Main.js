@@ -61,7 +61,7 @@ export default function Main() {
             data.map((item) => (
               <ImageListItem key={item._id}>
               {
-                item.images && 
+                item.images.length > 0 && 
                 <img
                   src={`https://kurta-backend-production.up.railway.app/${item.images[0].filename}`}
                   srcSet={`https://kurta-backend-production.up.railway.app/${item.images[0].filename}`}
