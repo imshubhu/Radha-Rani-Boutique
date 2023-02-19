@@ -10,6 +10,7 @@ import { Carousel } from "react-responsive-carousel";
 import Modal from "@mui/material/Modal";
 
 const style = {
+  height: '80vh',
   position: "absolute",
   top: "50%",
   left: "50%",
@@ -82,7 +83,7 @@ export default function Main() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Carousel>
+          <Carousel dynamicHeight={true} style={{height: '80vh'}}>
             {showPreview &&
               showPreview.map((e, i) => (
                 <div key={i}>
